@@ -96,7 +96,7 @@ server.get('/',function(req,res){
 });
 
 server.get('/add',function(req,res){
-  res.render('test');
+  res.render('error');
 
 });
 
