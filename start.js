@@ -76,7 +76,7 @@ server.post('/check',urlencodedParser,function(req,res){
     if(err) console.log(err);
     console.log(data.user);
     console.log(data[0].pass);
-    if (data[0].user) {
+    if (data) {
 
 
     if(data[0].pass==dat.pass){
