@@ -74,8 +74,6 @@ server.post('/check',urlencodedParser,function(req,res){
 
     var di=Log.find({"user":dat.user},function(err,data){
     if(err) console.log(err);
-    console.log(data.user);
-    console.log(data[0].pass);
     if (data) {
 
 
@@ -96,7 +94,7 @@ server.get('/',function(req,res){
 });
 
 server.get('/add',function(req,res){
-  res.render('error');
+  res.render('test');
 
 });
 
