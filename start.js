@@ -74,7 +74,7 @@ server.post('/check',urlencodedParser,function(req,res){
 
     var di=Log.find({"user":dat.user},function(err,data){
     if(err) console.log(err);
-    if (data) {
+    if (data!=NULL) {
 
 
     if(data[0].pass==dat.pass){
