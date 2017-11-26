@@ -74,10 +74,10 @@ server.post('/check',urlencodedParser,function(req,res){
 
     var di=Log.find({"user":dat.user},function(err,data){
     if(err) console.log(err);
-    console.log(data.user);
-    console.log(data[0].pass);
     if (data!=NULL) {
+    console.log(data[0].pass);
 
+    console.log(data[0].user);
 
     if(data[0].pass==dat.pass){
 console.log('success');
