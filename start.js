@@ -60,6 +60,7 @@ res.setHeader('Content-Type', 'application/json');
 server.post('/dr',urlencodedParser,function(req,res){
   console.log(req.body);
   var dat=req.body;
+  if (dat.user==){res.render('error');}
   var pone=Log({user:dat.user,pass:dat.pass}).save(
   function(err){
     if(err) console.log(err);
@@ -71,18 +72,17 @@ res.render('index');
 server.post('/check',urlencodedParser,function(req,res){
 
   var dat=req.body;
-
+if
     var di=Log.find({"user":dat.user},function(err,data){
     if(err) console.log(err);
     if (data!=NULL) {
 
 
-    if(data[0].pass==dat.pass){
+  
 console.log('success');
       res.render('main');
     }
 
-else{res.render('error');}}
 else{res.render('error');}
     });
 
